@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    </head>
+    <body>
+        <h1>{{ object.name }}</h1>
+        <br>
+        <img src='{{ object.pic }}'>
+        <p>{{ object.description }}</p>
+        <br>
+        <div>You can find {{ object.name }} at {{ data.org_name }}. Visit their <a href="{{ data.org_website }}">website</a> or <a href="mailto:{{ data.org_email }}">email them</a> to bring {{ object.name }} home!</div>
+        <br>
+    </body>
+</html>

@@ -14,17 +14,15 @@
                         <th>Breed</th>
                         <th>Location</th>
                         <th>Picture</th>
-                        <th>Description</th>
                     </tr>
                     {% for obj in object_list %}
                     <tr>
                         <td>{{ obj.id }}</td>
                         <td>{{ obj.org_id }}</td>
-                        <td>{{ obj.name }}</td>
+                        <td><a href="{{ obj.id }}">{{ obj.name }}</a></td>
                         <td>{{ obj.breed }}</td>
                         <td>{{ obj.location }}</td>
                         <td><img src='{{ obj.pic }}'></td>
-                        <td><div>{{ obj.description }}</div></td>
                     </tr>
                     {% endfor %}
         </table>

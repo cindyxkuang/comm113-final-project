@@ -45,3 +45,25 @@ def get_adoptable(location):
     content = response.text
     
     return json.loads(content)['data']
+
+def get_organization(org_id):
+    payload = {
+        'apikey': RESCUEGROUPS_KEY,
+        'objectType': 'orgs',
+        'objectAction': 'publicView',
+        'values': [
+            {
+                "orgID":org_id
+            }
+    
+        ],
+        'fields': [
+            'orgName',
+            'orgEmail',
+            'orgWebsiteUrl',
+        ]
+    }
+    response = requests.post('https://api.rescuegroups.org/http/v2.json', data=json.dumps(payload))
+    content = response.text
+    
+    return json.loads(content)['data'][0]
