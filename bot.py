@@ -23,6 +23,7 @@ def parse_search(search_results):
         name = result['animalName']
         pic = result['animalPictures'][0]['large']['url']
         description = result['animalDescriptionPlain']
+        thumbnail = result['animalThumbnailUrl']
 
         description = parse_description(description)
         breed = breed.replace('/', 'and')
@@ -33,7 +34,8 @@ def parse_search(search_results):
             'name': name, 
             'location': location, 
             'pic': pic, 
-            'description': description
+            'description': description,
+            'thumbnail': thumbnail
         })
 
     return adoptable_dogs

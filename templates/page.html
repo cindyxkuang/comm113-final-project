@@ -9,7 +9,7 @@
         <table cellpadding=7>
                     <tr>
                         <th>ID</th>
-                        <th>Organization ID</th>
+                        <th>Organization</th>
                         <th>Name</th>
                         <th>Breed</th>
                         <th>Location</th>
@@ -22,7 +22,7 @@
                         <td><a href="{{ obj.id }}">{{ obj.name }}</a></td>
                         <td>{{ obj.breed }}</td>
                         <td>{{ obj.location }}</td>
-                        <td><img src='{{ obj.pic }}'></td>
+                        <td><img src='{{ obj.thumbnail }}'></td>
                     </tr>
                     {% endfor %}
         </table>

@@ -37,6 +37,7 @@ def get_adoptable(location):
                 'animalName',
                 'animalBreed',
                 'animalDescriptionPlain',
+                'animalThumbnailUrl',
                 'animalPictures'
             ]
         }
