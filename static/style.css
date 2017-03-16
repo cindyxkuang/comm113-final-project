@@ -23,15 +23,15 @@ h1 {
 
 table {
     margin: 0 0 20px 0;
-    border-width: 0;
+    border-collapse: collapse;
+    border: 1px;
     width: 100%;
     font-size: 14px;
 }
-th {
-    text-align:left;
-}
+
 tr, td, th {
     border-color: #f2f2f2;
+    border: 1px; 
 }
 
 p {
